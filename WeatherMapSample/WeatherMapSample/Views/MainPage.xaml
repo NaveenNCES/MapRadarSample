@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:customrenderer="clr-namespace:WeatherMapSample.Renderer"
+             x:Class="WeatherMapSample.Views.MainPage"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="Fill"
+            Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Start" x:Name="start_button" Clicked="Button_Clicked_2"  BackgroundColor="LightBlue" TextColor="White" />
+                <Button Text="Stop" x:Name="stop_button" Clicked="Button_Clicked_3" BackgroundColor="LightBlue" TextColor="White"/>
+                <Label x:Name="label" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </StackLayout>
+            
+            <maps:Map x:Name="map" 
+                    VerticalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
